@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/music_app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Music</title>
+</head>
+
+<body>
+    <div class="search-container">
+        <input type="search" class="search" placeholder="Song name..">
+        <i class="fas fa-search"></i>
+    </div>
+    <div class="main_div">
+        <div class="current_song"></div>
+        <img src="" id="cover_photo" onload="change()" />
+        <h1 id="title"></h1>
+        <p id="singer"></p>
+        <div class="slider_container">
+            <div class="current-time">00:00</div>
+            <input type="range" min="0" max="100" value="0" class="seek_slider" id="seek_slider" onchange="seekTo()">
+            <div class="total-duration">00:00</div>
+        </div>
+        <div class="buttons">
+            <button id="prev"><i class="fas fa-backward fa-3x prev"></i></button>
+            <button id="play"><i class="fas fa-play fa-3x prev pl"></i></button>
+            <button id="next"><i class="fas fa-forward fa-3x prev"></i></button>
+        </div>
+    </div>
+    <div class=" found">
+
+    </div>
+    <div class="notfound">
+        <h1>Not Found</h1>
+    </div>
+    <script src="assets/music_app.js"></script>
+</body>
+
+</html>
